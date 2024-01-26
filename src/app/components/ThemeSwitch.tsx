@@ -1,6 +1,6 @@
 "use client";
 import { useTheme } from "next-themes";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { cn } from "../lib/cn";
 import DarkModeIcon from "../svgs/DarkModeIcon";
 import LightModeIcon from "../svgs/LightModeIcon";
@@ -11,6 +11,7 @@ const ThemeSwitch = () => {
 
   useEffect(() => {
     setMounted(true);
+    setTheme("light");
   }, []);
 
   if (!mounted) {
