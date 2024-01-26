@@ -1,16 +1,19 @@
 "use client";
-import { sidebarBottomArray, sidebarTopArray } from "@/app/constants/sidebar";
-import { ISideBar } from "@/app/constants/types";
-import { cn } from "@/app/lib/cn";
-import { showToast } from "@/app/lib/toast";
-import { open, setOpen } from "@/app/store";
-import ActiveSideBarIcon from "@/app/svgs/ActiveSideBarIcon";
 import { NextPage } from "next";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
+import {
+  sidebarBottomArray,
+  sidebarTopArray,
+} from "../../../app/constants/sidebar";
+import { ISideBar } from "../../../app/constants/types";
+import { cn } from "../../../app/lib/cn";
+import { showToast } from "../../../app/lib/toast";
+import { open, setOpen } from "../../../app/store";
+import ActiveSideBarIcon from "../../../app/svgs/ActiveSideBarIcon";
 
 const SideBar: NextPage = () => {
   const pathname = usePathname();
@@ -24,7 +27,7 @@ const SideBar: NextPage = () => {
     <header
       data-testid="sidebar-wrapper"
       className={cn(
-        "sm:block overflow-auto no-scrollbar fixed left-0 top-0 bg-tremor-brand-sidebar dark:invert shadow-tremor-sidebar border-r-[0.77px] border-tremor-icon-border min-h-[100vh] h-full",
+        "sm:block overflow-auto no-scrollbar fixed left-0 top-0 bg-tremor-brand-sidebar dark:invert shadow-tremor-sidebar dark:border-r-[0.01px] border-r-[0.77px] border-tremor-icon-border min-h-[100vh] h-full",
         {
           "block z-50": openn,
           hidden: !openn,
@@ -44,6 +47,7 @@ const SideBar: NextPage = () => {
             return (
               <Link
                 data-testid="link"
+                aria-label="Side bar top link"
                 href={(route && route === "/switch") || !route ? "#" : route}
                 onClick={route ? () => null : showToast}
                 key={id}
@@ -63,7 +67,13 @@ const SideBar: NextPage = () => {
         >
           {sidebarBottomArray.map(({ id, icon }: ISideBar) => {
             return (
-              <Link onClick={showToast} data-testid="link" href={`/`} key={id}>
+              <Link
+                aria-label="Side bar bottom link"
+                onClick={showToast}
+                data-testid="link"
+                href={`/`}
+                key={id}
+              >
                 {icon}
               </Link>
             );

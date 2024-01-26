@@ -1,7 +1,7 @@
 "use client";
 import { Card, Flex, Text } from "@tremor/react";
 import Image from "next/image";
-import { useSelector } from "react-redux";
+import React from "react";
 import SalesTrend from "./components/BarChart/SalesTrend";
 import DashboardHeader from "./components/Header/Header";
 import SideBar from "./components/SideBar/SideBar";
@@ -17,15 +17,13 @@ import { cardData } from "./constants/smallerCards";
 import { cn } from "./lib/cn";
 import { currencyFormatter } from "./lib/currencyFormater";
 import { key } from "./lib/uniqueKey";
-import { open } from "./store";
 export default function Home() {
-  const openn = useSelector(open);
   return (
     <Flex className="bg-tremor-brand-sidebar items-start dark:bg-black min-h-screen h-[100vh] ">
       <SideBar />
       <main
         className={cn(
-          "w-full md:w-[calc(100vw-80px)] absolute right-0 overflow-auto border-l-[0.77px] border-tremor-icon-border"
+          "w-full md:w-[calc(100vw-80px)] absolute right-0 overflow-auto border-l-[0.01px] border-tremor-icon-border"
         )}
       >
         <DashboardHeader />

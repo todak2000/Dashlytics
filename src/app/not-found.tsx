@@ -1,5 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import type { Metadata } from "next";
+import React from "react";
 import LogoIcon from "./svgs/LogoIcon";
 export const metadata: Metadata = {
   title: "Not Found",

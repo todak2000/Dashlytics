@@ -1,3 +1,4 @@
+import React from "react";
 import ThemeSwitch from "../components/ThemeSwitch";
 import { key } from "../lib/uniqueKey";
 import AnalyticsIcon from "../svgs/AnalyticsIcon";

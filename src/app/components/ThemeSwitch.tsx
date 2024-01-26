@@ -1,6 +1,6 @@
 "use client";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { cn } from "../lib/cn";
 import DarkModeIcon from "../svgs/DarkModeIcon";
 import LightModeIcon from "../svgs/LightModeIcon";
@@ -23,6 +23,7 @@ const ThemeSwitch = () => {
         data-testid="light-theme-button"
         disabled={theme === "light"}
         onClick={() => setTheme("light")}
+        aria-label="Switch to Light Theme"
         type="button"
       >
         <LightModeIcon
@@ -37,6 +38,7 @@ const ThemeSwitch = () => {
       <button
         data-testid="dark-theme-button"
         disabled={theme === "dark"}
+        aria-label="Switch to Dark Theme"
         onClick={() => setTheme("dark")}
         type="button"
       >

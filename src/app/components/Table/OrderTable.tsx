@@ -1,9 +1,4 @@
 "use client";
-import { ViewIcon } from "@/app/constants/images";
-import { lastOrders, seeAll, tableData } from "@/app/constants/other";
-import { cn } from "@/app/lib/cn";
-import { currencyFormatter } from "@/app/lib/currencyFormater";
-import { showToast } from "@/app/lib/toast";
 import {
   Table,
   TableBody,
@@ -17,6 +12,11 @@ import {
 import { NextPage } from "next";
 import Image from "next/image";
 import React from "react";
+import { ViewIcon } from "../../../app/constants/images";
+import { lastOrders, seeAll, tableData } from "../../../app/constants/other";
+import { cn } from "../../../app/lib/cn";
+import { currencyFormatter } from "../../../app/lib/currencyFormater";
+import { showToast } from "../../../app/lib/toast";
 
 const OrderTable: NextPage = () => {
   return (
@@ -30,7 +30,8 @@ const OrderTable: NextPage = () => {
         </Title>
         <Title
           data-testid="order-title"
-          className="medium-lg text-tremor-brand-primary dark:invert-0"
+          onClick={showToast}
+          className="medium-lg cursor-pointer text-tremor-brand-primary dark:invert-0"
         >
           {seeAll}
         </Title>

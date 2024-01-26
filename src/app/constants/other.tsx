@@ -1,4 +1,5 @@
 import { faker } from "@faker-js/faker";
+import React from "react";
 import { formatedDate } from "../lib/date.";
 import UserIcon from "../svgs/UserIcon";
 import { ITable } from "./types";

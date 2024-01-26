@@ -44,8 +44,7 @@ This project implements the following features:
 - 💎 Dynamic Data Handling: The data used in this project generated in real time including `names`, `date` and `chart data` using `faker` library. See `src/app/constants/<component>` file .e.g. `src/app/constants/sales.tsx` to see how sales trend data is generated in realtime.
 
 - 💎 User Experience/ Interactivity: To acccount for screen/features not implemented, potential user activity anticipated have been handled to return some messages as snackbar. e.g. on Click any of the sidebar menu apart from the logo and the theme icons would render a snack bar message `Oops! 🚧 This feature is still under construction. Please check back soon! 😊`.
-- 💎 Mobile Responsiveness: This dashboard is very responsive on any screen ranging from small screen sizes to extra large screens. Moreso, the sidebar can toggled to show on mobile screens without having to disrupt the Dashboard UI. See image below
-  <img src="public/gif/dashlytics_mobile.gif" alt="Image dashlytics" width="600px" height="auto"/>
+- 💎 Mobile Responsiveness: This dashboard is very responsive on any screen ranging from small screen sizes to extra large screens. Moreso, the sidebar can toggled to show on mobile screens without having to disrupt the Dashboard UI.
 
 ## Getting Started
 

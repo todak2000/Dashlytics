@@ -1,13 +1,14 @@
 "use client";
-import { seeAll } from "@/app/constants/other";
-import { platformData, topPlatforms } from "@/app/constants/platform";
-import { IPlatform } from "@/app/constants/types";
-import { currencyFormatter } from "@/app/lib/currencyFormater";
-import { key } from "@/app/lib/uniqueKey";
+import { seeAll } from "../../../app/constants/other";
+import { platformData, topPlatforms } from "../../../app/constants/platform";
+import { IPlatform } from "../../../app/constants/types";
+import { currencyFormatter } from "../../../app/lib/currencyFormater";
+import { key } from "../../../app/lib/uniqueKey";
 
 import { Flex, ProgressBar, Text, Title } from "@tremor/react";
 import { NextPage } from "next";
 import React from "react";
+import { showToast } from "../../lib/toast";
 
 const PlatformTable: NextPage = () => {
   return (
@@ -21,7 +22,8 @@ const PlatformTable: NextPage = () => {
         </Title>
         <Title
           data-testid="platform-title"
-          className="medium-lg text-tremor-brand-primary dark:invert-0"
+          onClick={showToast}
+          className="medium-lg cursor-pointer text-tremor-brand-primary dark:invert-0"
         >
           {seeAll}
         </Title>

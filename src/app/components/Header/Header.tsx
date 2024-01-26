@@ -1,22 +1,23 @@
 "use client";
+import Image from "next/image";
+import React from "react";
+import { IoIosArrowForward } from "react-icons/io";
+import { useDispatch, useSelector } from "react-redux";
 import {
   dashboardEmail,
   dashboardName,
   dashboardText,
-} from "@/app/constants/header";
+} from "../../../app/constants/header";
 import {
   DownArrowIcon,
   NotificationIcon,
   SearchIcon,
   TimeIcon,
-} from "@/app/constants/images";
-import { formatedDate } from "@/app/lib/date.";
-import { showToast } from "@/app/lib/toast";
-import { open, setOpen } from "@/app/store";
-import UserIcon from "@/app/svgs/UserIcon";
-import Image from "next/image";
-import { IoIosArrowForward } from "react-icons/io";
-import { useDispatch, useSelector } from "react-redux";
+} from "../../../app/constants/images";
+import { formatedDate } from "../../../app/lib/date.";
+import { showToast } from "../../../app/lib/toast";
+import { open, setOpen } from "../../../app/store";
+import UserIcon from "../../../app/svgs/UserIcon";
 const DashboardHeader = () => {
   const dispatch = useDispatch();
   const openn = useSelector(open);

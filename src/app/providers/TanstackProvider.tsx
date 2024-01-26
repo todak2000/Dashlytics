@@ -3,7 +3,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { ThemeProvider } from "next-themes";
-import { useEffect, useState, type PropsWithChildren } from "react";
+import React, { useEffect, useState, type PropsWithChildren } from "react";
 import { Provider } from "react-redux";
 import store from "../store";
 
