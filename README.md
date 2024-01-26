@@ -2,11 +2,13 @@
 
 A streamlined app designed to provide a comprehensive analytics dashboard. It offers real-time data visualization, helping users track key metrics, understand trends, and make data-driven decisions with ease.
 
-<img src="public/gif/dashlytics_mobile.gif" alt="Image dashlytics" width="800px" height="auto"/>
+<img src="public/gif/dashlytics.gif" alt="Image dashlytics" width="600px" height="auto"/>
 
 ## LightHouse Score
 
-Coming soon
+![Light house score - Desktop](lighthouse_results/desktop/pagespeed.svg)
+
+[LIGHTHOUSE SCORE LINK](https://htmlpreview.github.io/?https://github.com/todak2000/Dashlytics/blob/main/lighthouse_results/desktop/dashlytics_vercel_app.html)
 
 ## URL
 
@@ -43,7 +45,7 @@ This project implements the following features:
 
 - 💎 User Experience/ Interactivity: To acccount for screen/features not implemented, potential user activity anticipated have been handled to return some messages as snackbar. e.g. on Click any of the sidebar menu apart from the logo and the theme icons would render a snack bar message `Oops! 🚧 This feature is still under construction. Please check back soon! 😊`.
 - 💎 Mobile Responsiveness: This dashboard is very responsive on any screen ranging from small screen sizes to extra large screens. Moreso, the sidebar can toggled to show on mobile screens without having to disrupt the Dashboard UI. See image below
-  <img src="public/gif/dashlytics_mobile.gif" alt="Image dashlytics" width="800px" height="auto"/>
+  <img src="public/gif/dashlytics_mobile.gif" alt="Image dashlytics" width="600px" height="auto"/>
 
 ## Getting Started
 
