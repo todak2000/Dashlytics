@@ -56,7 +56,7 @@ export const DashlyticsToast = {
     return toastId;
   },
 
-  dismiss: (toastId) => {
+  dismiss: (toastId: string) => {
     toast.dismiss(toastId);
   },
 };
