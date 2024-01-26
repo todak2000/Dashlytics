@@ -24,17 +24,26 @@ const mtToastStyle = {
 };
 
 export const DashlyticsToast = {
-  success: ({ msg, position = ToastPosition.TOPRIGHT }: ToastProps) =>
-    toast.success(msg, {
+  success: ({ msg, position = ToastPosition.TOPRIGHT }: ToastProps) => {
+    const toastId = toast.success(msg, {
       position,
       duration: 6000,
       ...mtToastStyle,
-    }),
+    });
+    return toastId;
+  },
 
-  error: ({ msg, position = ToastPosition.TOPRIGHT }: ToastProps) =>
-    toast.error(msg, { duration: 6000, position, ...mtToastStyle }),
-  warn: ({ msg, position = ToastPosition.TOPRIGHT }: ToastProps) =>
-    toast.custom(msg, {
+  error: ({ msg, position = ToastPosition.TOPRIGHT }: ToastProps) => {
+    const toastId = toast.error(msg, {
+      duration: 6000,
+      position,
+      ...mtToastStyle,
+    });
+    return toastId;
+  },
+
+  warn: ({ msg, position = ToastPosition.TOPRIGHT }: ToastProps) => {
+    const toastId = toast.custom(msg, {
       position,
       duration: 6000,
       style: {
@@ -43,22 +52,32 @@ export const DashlyticsToast = {
         color: "yellow",
       },
       className: "bg-primary-60 text-neutral white",
-    }),
+    });
+    return toastId;
+  },
+
+  dismiss: (toastId) => {
+    toast.dismiss(toastId);
+  },
 };
 
+const milliSeconds = 2500;
 export const showToast = () => {
-  DashlyticsToast.error({
+  const toastId = DashlyticsToast.error({
     msg: `Oops! 🚧 This feature is still under construction. Please check back soon! 😊`,
   });
+  setTimeout(() => DashlyticsToast.dismiss(toastId), milliSeconds);
 };
 export const showSalesToast = (n: number) => {
+  let toastId: string;
   if (n > 0) {
-    DashlyticsToast.success({
+    toastId = DashlyticsToast.success({
       msg: `Yea! 💪 Sales trend data updated 📈 `,
     });
   } else {
-    DashlyticsToast.error({
+    toastId = DashlyticsToast.error({
       msg: `Oops! 🕵️‍♀️ We couldn’t find any data. Please try again later! 😊`,
     });
   }
+  setTimeout(() => DashlyticsToast.dismiss(toastId), milliSeconds);
 };
