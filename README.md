@@ -2,7 +2,7 @@
 
 A streamlined app designed to provide a comprehensive analytics dashboard. It offers real-time data visualization, helping users track key metrics, understand trends, and make data-driven decisions with ease.
 
-![Image dashlytics](public/gif/dashlytics.gif)
+<img src="public/gif/dashlytics_mobile.gif" alt="Image dashlytics" width="800px" height="auto"/>
 
 ## LightHouse Score
 
@@ -43,7 +43,7 @@ This project implements the following features:
 
 - 💎 User Experience/ Interactivity: To acccount for screen/features not implemented, potential user activity anticipated have been handled to return some messages as snackbar. e.g. on Click any of the sidebar menu apart from the logo and the theme icons would render a snack bar message `Oops! 🚧 This feature is still under construction. Please check back soon! 😊`.
 - 💎 Mobile Responsiveness: This dashboard is very responsive on any screen ranging from small screen sizes to extra large screens. Moreso, the sidebar can toggled to show on mobile screens without having to disrupt the Dashboard UI. See image below
-  ![Image dashlytics](public/gif/dashlytics.gif)
+  <img src="public/gif/dashlytics_mobile.gif" alt="Image dashlytics" width="800px" height="auto"/>
 
 ## Getting Started
 
